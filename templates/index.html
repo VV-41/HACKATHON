@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NyayaAI - Legal Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <header class="hero">
+            <h1>न्यायAI</h1>
+            <p>Your AI-powered legal query assistant</p>
+        </header>
+
+        <section class="chat-card">
+            <h2>Ask Your Legal Question</h2>
+            <textarea id="queryInput" placeholder="Example: What are my rights if I am arrested without a warrant?"></textarea>
+            <button id="askBtn">Ask NyayaAI</button>
+
+            <div id="loading" class="hidden">Analyzing your legal query...</div>
+
+            <div id="responseBox" class="response-box hidden">
+                <h3>Response</h3>
+                <p><strong>Answer:</strong> <span id="answerText"></span></p>
+                <p><strong>Category:</strong> <span id="categoryText"></span></p>
+                <p><strong>Similarity Score:</strong> <span id="similarityText"></span></p>
+
+                <div id="topMatchesSection">
+                    <h4>Related Matches</h4>
+                    <div id="topMatches"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Legal Query Analysis</h3>
+                <p>Understands common legal problems and retrieves relevant responses.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Case-based Retrieval</h3>
+                <p>Matches user questions with legal dataset entries using NLP.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Hackathon Ready</h3>
+                <p>Simple, presentable, and easy to publish on GitHub.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Disclaimer: This system provides informational assistance only and is not a substitute for professional legal advice.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
